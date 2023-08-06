@@ -1,14 +1,8 @@
 import json
 import os
-from itertools import islice
-from ez import get_info_path,stop,pause
+from tools.tools import pause, stop, print_separator
 
 info_file_path = "./info/info.json"
-
-def print_separator(message="",line_size=30):
-	left_line_size = (line_size-len(str(message)))//2
-	right_line_size = line_size-left_line_size-len(str(message))
-	print(f"{'='*left_line_size}{message}{'='*right_line_size}")
 
 class Scrcpy:
 	def __init__(self, **kwargs):

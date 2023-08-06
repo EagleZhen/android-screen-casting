@@ -1,1 +1,1 @@
-python "android-screen-casting"
+python "android-screen-casting.py"
