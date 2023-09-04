@@ -13,11 +13,11 @@
     "device_list": [
         {
             "name": "POCO F2 Pro",
-            "ip_addresses": ["192.xxx.xxx.xxx","10.xxx.xxx.xxx"],
+            "ip_list": ["192.xxx.xxx.xxx","10.xxx.xxx.xxx"],
             "ip_id": 0,
             "port": 39711,
             "serial": "🤫",
-            "connection_type": "WIFI",
+            "connection_type": "USB",
             "video": true,
             "audio": false,
             "borderless": true,
