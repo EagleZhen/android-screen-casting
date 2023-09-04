@@ -1,0 +1,51 @@
+{
+    "adb":{
+        "name": "adb",
+        "path": "<script_path>/platform-tools_r34.0.4-windows",
+        "version": "1.0.41",
+        "command": "adb connect <id>"
+    },
+    "scrcpy":{
+        "name": "scrcpy",
+        "path": "<script_path>/scrcpy-win64-v2.1.1",
+        "command": "scrcpy-noconsole.vbs -s <id> --window-title <title> --no-clipboard-autosync"
+    },
+    "device_list": [
+        {
+            "name": "POCO F2 Pro",
+            "ip_addresses": ["192.xxx.xxx.xxx","10.xxx.xxx.xxx"],
+            "ip_id": 0,
+            "port": 39711,
+            "serial": "🤫",
+            "connection_type": "WIFI",
+            "video": true,
+            "audio": false,
+            "borderless": true,
+            "fullscreen": true
+        },
+        {
+            "name": "Galaxy Tab S7",
+            "ip_list": ["192.xxx.xxx.xxx","10.xxx.xxx.xxx"],
+            "ip_id": 0,
+            "port": 34161,
+            "serial": "🤫",
+            "connection_type": "WIFI",
+            "video": true,
+            "audio": false,
+            "borderless": true,
+            "fullscreen": true
+        },
+        {
+            "name": "Galaxy S23+",
+            "ip_list": ["192.xxx.xxx.xxx","10.xxx.xxx.xxx"],
+            "ip_id": 1,
+            "port": 35013,
+            "serial": "🤫",
+            "connection_type": "WIFI",
+            "video": true,
+            "audio": true,
+            "borderless": true,
+            "fullscreen": true
+        }
+    ]
+}
