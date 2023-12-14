@@ -22,8 +22,8 @@ class Scrcpy:
             scrcpy_command += " --no-video"
         if device.audio is False:
             scrcpy_command += " --no-audio"
-        if device.borderless is False:
-            scrcpy_command += " --no-audio"
+        if device.borderless is True:
+            scrcpy_command += " --window-borderless"
         if device.fullscreen is True:
             scrcpy_command += " --fullscreen"
 
@@ -113,5 +113,8 @@ print_separator("END")
 device_id = int(input("Selected Device ID = "))
 print_separator()
 
-device_list[device_id].connect_adb()
-device_list[device_id].activate_scrcpy()
+if (device_list[device_id].connection_type == "WIFI"):
+    device_list[device_id].connect_adb()
+    
+if (device_list[device_id].video is True) or (device_list[device_id].audio is True):
+    device_list[device_id].activate_scrcpy()
