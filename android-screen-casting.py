@@ -81,7 +81,7 @@ def read_device_info():
     return device_list
 
 
-class Adb:
+class ADB:
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
         self.path = self.path.replace("<script_path>", os.path.dirname(os.path.abspath(__file__)))
@@ -95,7 +95,7 @@ class Adb:
 def read_adb_info():
     with open(info_file_path, "r") as file:
         data = json.load(file)
-        adb = Adb(**data["adb"])
+        adb = ADB(**data["adb"])
 
     return adb
 
