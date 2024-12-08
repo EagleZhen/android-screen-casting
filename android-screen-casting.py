@@ -49,10 +49,10 @@ def read_scrcpy_info():
 class Device:
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
-        
+
         if self.connection_type == "WIFI":
             # Use IP instead of serial number to specify devices (Wireless debugging)
-            self.id = f"{self.ip_list[self.ip_id]}:{self.port}"    
+            self.id = f"{self.ip_list[self.ip_id]}:{self.port}"
         elif self.connection_type == "USB":
             # Use serial number to specify devices (USB debugging)
             self.id = f"{self.serial}"
@@ -115,6 +115,6 @@ print_separator()
 
 if (device_list[device_id].connection_type == "WIFI"):
     device_list[device_id].connect_adb()
-    
+
 if (device_list[device_id].video is True) or (device_list[device_id].audio is True):
     device_list[device_id].activate_scrcpy()
