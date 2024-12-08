@@ -16,7 +16,11 @@ class Scrcpy:
         # set up scrcpy command
         scrcpy_command = self.command
         scrcpy_command = scrcpy_command.replace("<title>", f'"{device.name}"')  # set device name as the window title
-        scrcpy_command = scrcpy_command.replace("<id>", device.id)  # set device id for connecting
+
+        if device.id not in ["", None]:
+            scrcpy_command = scrcpy_command.replace("<id>", device.id)  # set device id for connecting
+        else:
+            scrcpy_command = scrcpy_command.replace(" -s <id>", "")  # remove device id if not provided
 
         if device.video is False:
             scrcpy_command += " --no-video"
