@@ -7,7 +7,7 @@
     },
     "scrcpy":{
         "name": "scrcpy",
-        "path": "<script_path>/scrcpy-win64-v2.1.1",
+        "path": "<script_path>/scrcpy-win64-v3.2",
         "command": "scrcpy-noconsole.vbs -s <id> --window-title <title> --no-clipboard-autosync"
     },
     "device_list": [
